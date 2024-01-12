@@ -16,4 +16,22 @@ function horasDigital() {
   digital.innerHTML = `${horas}:${minutos}:${segundos}`;
 }
 
+function horasAnal() {
+  let now = new Date();
+
+  let segundos = now.getSeconds();
+  let minutos = now.getMinutes();
+  let horas = now.getHours();
+
+  let anguloSegundos = (segundos / 60) * 360;
+  let anguloMinutos = (minutos / 60) * 360;
+  let anguloHoras = ((horas % 12) / 12) * 360 + (minutos / 60) * 30; // 30 graus por hora
+
+  sElement.style.transform = `rotate(${anguloSegundos}deg)`;
+  mElement.style.transform = `rotate(${anguloMinutos}deg)`;
+  hElement.style.transform = `rotate(${anguloHoras}deg)`;
+}
+
+setInterval(horasAnal, 1000);
+
 setInterval(horasDigital, 1000);
