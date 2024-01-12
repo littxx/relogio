@@ -12,19 +12,41 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  padding: 10px;
   justify-content: space-between;
   align-items: center;
 }
 
-.login-cadastro {
-  display: flex;
-  gap: 10px; /* Espaço entre os links de login e cadastro */
-  align-items: center;
+.login-cadastro a {
+  text-decoration: none; /* Remove sublinhado dos links */
+  color: #333; /* Cor do texto */
+  font-size: 18px; /* Tamanho da fonte */
+  margin-right: 10px; /* Espaço à direita entre os links */
+  padding: 5px 10px; /* Espaçamento interno para destacar os links */
+  border: 2px solid #333; /* Borda sólida */
+  border-radius: 5px; /* Borda arredondada */
+  transition: background-color 0.3s, color 0.3s; /* Transição suave de cores */
+  display: inline-block; /* Adicionado para tornar os links clicáveis */
+  cursor: pointer; /* Adicionado para mostrar o cursor de clique */
+}
+
+/* Estilizando o hover dos links */
+.login-cadastro a:hover {
+  background-color: #333; /* Cor de fundo ao passar o mouse */
+  color: #fff; /* Cor do texto ao passar o mouse */
+  transition: background-color 0.3s, color 0.3s; /* Manter a transição suave */
 }
 
 /* Estilo opcional para o reloginho ficar mais à esquerda */
 .header > div:first-child {
   margin-left: 20px;
+}
+.header > div:first-child {
+  font-size: 24px; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
+  font-weight: bold; /* Negrito */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  margin-left: 20px; /* Espaço à esquerda */
 }
 
 h1 {
